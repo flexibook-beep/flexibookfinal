@@ -4,6 +4,8 @@ import { authOptions } from "@/lib/auth"
 import { exchangeGoogleCalendarCode } from "@/lib/google-calendar"
 import { prisma } from "@/lib/prisma"
 
+export const dynamic = 'force-dynamic'
+
 export async function GET(req: NextRequest) {
   try {
     const session = await getServerSession(authOptions)
@@ -49,4 +51,3 @@ export async function GET(req: NextRequest) {
     )
   }
 }
-
